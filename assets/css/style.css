@@ -36,10 +36,27 @@ section.main .faq-title{
     display: flex;
     align-items: center;
     gap: 30px;
+    margin-bottom: 35px;
 }
 
 section.main .faq-title h1{
     font-size: 40px;
+}
+
+section.main .all-faq{
+    display:flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+section.main .faq-single{
+    display: flex;
+    align-items: center;
+}
+
+section.main .faq-single img{
+    position: absolute;
+    right: 40px;
 }
 
 section.main .box p{
