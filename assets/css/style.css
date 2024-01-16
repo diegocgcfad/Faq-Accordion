@@ -51,11 +51,17 @@ section.main .all-faq{
 
 section.main .all-faq h4{
     color: hsl(292, 42%, 14%);
+    width: 90%;
+    font-size: 16px;
 }
 
 section.main .all-faq h4:hover{
     cursor: pointer;
     color: #ad28eb;
+}
+
+section.main .all-faq #selected-answer{
+    display: block;
 }
 
 section.main .all-faq p{
