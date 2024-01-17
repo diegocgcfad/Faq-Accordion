@@ -78,7 +78,7 @@ section.main .faq-single img{
     right: 40px;
 }
 
-section.main .box p{
+section.main .answer{
     display: none;
 }
 
@@ -94,3 +94,8 @@ section.main .box p{
 .attribution a{
     color: hsl(228, 45%, 44%);
 }
+
+section.main .selected{
+    display: block;
+}
+
