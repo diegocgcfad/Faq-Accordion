@@ -20,26 +20,30 @@
 
     <script>
 
-        const buttons = document.querySelectorAll('.but');
-        const paragraphs = document.querySelectorAll('.par');
-       
-
-        buttons.forEach(myFunction);
+        const butns = document.querySelectorAll('.but');
+        const parag = document.querySelectorAll('.par');
         
+        butns.forEach(myFunction);
 
-        function myFunction(item, index){
+        function myFunction(item,index){
 
-            item.addEventListener('click', () =>{ 
-                paragraphs[index].classList.add('painted');
+            item.addEventListener('click',() =>{
+                removeStyle();
+                parag[index].classList.add('painted');
             })
+        }
 
-            };
-        
-        
-           
-        
+        function removeStyle(){
+            const styled = document.querySelector('.painted');
+            if(styled == null){
+                return 0;
+            }else{
+                styled.classList.remove('painted');
+            }
+        }
 
     </script>
+
 
 </body>
 </html>

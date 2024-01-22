@@ -1,26 +1,23 @@
-/**function showAnswer(idd,img){
-    document.getElementById(idd).style.display = 'block';
-    document.getElementById(img).src = 'assets/images/icon-minus.svg';
+const questions = document.querySelectorAll('.question');
+const questionsImages = document.querySelectorAll('.icon-plus');
+const answers = document.querySelectorAll('.answer');
+
+questions.forEach(showContent);
+questionsImages.forEach(showContent);
+//Falta trocar a imagem quando clica de mais para menos
+
+function showContent(item, index){
+    item.addEventListener('click', () =>{
+        hideContent();
+        answers[index].classList.add('selected');
+    })
 }
 
-
-document.getElementById("question").addEventListener("click", test);
-
-function test(){
-    document.getElementById('answer').id = 'selected-answer';
-}**/
-
-//Passo 1 - Pegar as perguntas e respostas
-const question = document.querySelectorAll('.question');
-const answer = document.querySelectorAll('.answer');
-
-//Passo 2 - Adicionar a classe selecionada no parágrafo quando clica no título
-question.forEach((questions) =>{
-    questions.addEventListener('click', () =>{
-        answer.forEach((answers) =>{
-            answers.classList.add('selected');
-        })
-    })
-})
-
-
+function hideContent(){
+    const toHide = document.querySelector('.selected');
+    if(toHide == null){
+        return 0;
+    }else{
+        toHide.classList.remove('selected');
+    }
+}
