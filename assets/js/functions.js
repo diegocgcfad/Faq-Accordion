@@ -1,23 +1,28 @@
 const questions = document.querySelectorAll('.question');
-const questionsImages = document.querySelectorAll('.icon-plus');
+const iconsPlus = document.querySelectorAll('.icon-plus');
 const answers = document.querySelectorAll('.answer');
 
 questions.forEach(showContent);
-questionsImages.forEach(showContent);
-//Falta trocar a imagem quando clica de mais para menos
+iconsPlus.forEach(showContent);
 
 function showContent(item, index){
-    item.addEventListener('click', () =>{
+    item.addEventListener('click', function(){
         hideContent();
         answers[index].classList.add('selected');
-    })
+        iconsPlus[index].classList.add('imgselected');
+        iconsPlus[index].src = "assets/images/icon-minus.svg"
+    });
 }
 
 function hideContent(){
-    const toHide = document.querySelector('.selected');
-    if(toHide == null){
+    const current = document.querySelector('.selected');
+    const currentImg = document.querySelector('.imgselected');
+    if(current == null || currentImg == null){
         return 0;
     }else{
-        toHide.classList.remove('selected');
+        current.classList.remove('selected');
+        currentImg.classList.remove('imgselected');
+        currentImg.src = "assets/images/icon-plus.svg";
     }
 }
+

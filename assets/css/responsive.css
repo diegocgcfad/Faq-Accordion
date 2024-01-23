@@ -1,0 +1,9 @@
+@media (max-width: 600px){
+    section.main .box{
+        width: 95%;
+    }
+
+    section.main .all-faq h4{
+        width: 80%;        
+    }
+}
