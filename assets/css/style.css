@@ -66,12 +66,11 @@ section.main .all-faq p{
 
 section.main .faq-single{
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 section.main .faq-single img{
-    position: absolute;
-    right: 40px;
     cursor: pointer;
 }
 
